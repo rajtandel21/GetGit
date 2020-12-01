@@ -1,0 +1,13 @@
+.repo {
+  border: 1px solid black;
+  margin: 20px 40px;
+  padding: 10px;
+}
+
+h3 > a {
+  text-decoration: none;
+}
+
+.stats {
+  margin: 0 10px;
+}

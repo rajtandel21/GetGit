@@ -1,4 +1,5 @@
 import React from 'react';
+import Repo from '../Repo';
 
 class Git extends React.Component{
 
@@ -13,7 +14,6 @@ class Git extends React.Component{
 
     repoData = (data) => {
         this.setState(prevState => ({
-            prevState,
             [data.name]: {
                 name: data.name,
                 description: data.description,
@@ -26,9 +26,28 @@ class Git extends React.Component{
         }))
     }
 
+    allRepos = ()=>{
+        const repoElements = [];
+
+        for(const [repoName, repoData] of Object.entries(this.state)){
+            repoElements.push(<Repo 
+                key={repoName}
+                name={repoName}
+                description={repoData.description}
+                url={repoData.url}
+                languages={repoData.languages}
+                stargazers={repoData.stargazers}
+                watchers={repoData.watchers}
+                updated={repoData.updated}
+                />)
+        }
+
+        return repoElements;
+    }
+
     render(){
         return(
-            <p>{this.props.userName}</p>
+            this.allRepos()
         );
     };
 }
