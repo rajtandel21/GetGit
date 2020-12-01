@@ -1,4 +1,4 @@
-# A simple Template for Reactjs projects
+# GitGit
 
 To do router work please also install react-router-dom
 
