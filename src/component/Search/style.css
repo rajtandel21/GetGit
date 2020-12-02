@@ -10,4 +10,17 @@
 
 .searchBtn {
   height: 25px;
+  background-color: rgb(44, 48, 59);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 40vh;
+  width: 100%;
 }

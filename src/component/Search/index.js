@@ -28,7 +28,9 @@ class Search extends React.Component{
                     <input className="searchField" type="text" value={this.state.userName} onChange={this.changeUser} />
                     <input className="searchBtn" type="submit" value="Search" />
                 </form>
-                {this.state.userEntered ? (<Git userName={this.state.userName} />) : (<p>Please enter a User Name</p>)}
+                {this.state.userEntered ? (<div className="result">
+                    <Git userName={this.state.userName} />
+                </div>) : null}
             </div>
         );
     };

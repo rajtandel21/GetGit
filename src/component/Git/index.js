@@ -21,7 +21,8 @@ class Git extends React.Component{
                 languages: data.language,
                 stargazers: data.stargazers_count,
                 watchers: data.watchers_count,
-                updated: data.updated_at
+                updated: data.updated_at,
+                created: data.created_at
             }
         }))
     }
@@ -39,6 +40,7 @@ class Git extends React.Component{
                 stargazers={repoData.stargazers}
                 watchers={repoData.watchers}
                 updated={repoData.updated}
+                created={repoData.created}
                 />)
         }
 
