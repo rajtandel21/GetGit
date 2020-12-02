@@ -1,5 +1,6 @@
 import React from 'react';
 import Git from '../Git';
+import './style.css';
 
 class Search extends React.Component{
     state = {
@@ -22,10 +23,10 @@ class Search extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="searchContainer">
                 <form onSubmit={this.formSubmitted}>
-                    <input type="text" value={this.state.userName} onChange={this.changeUser} />
-                    <input type="submit" value="Search" />
+                    <input className="searchField" type="text" value={this.state.userName} onChange={this.changeUser} />
+                    <input className="searchBtn" type="submit" value="Search" />
                 </form>
                 {this.state.userEntered ? (<Git userName={this.state.userName} />) : (<p>Please enter a User Name</p>)}
             </div>
